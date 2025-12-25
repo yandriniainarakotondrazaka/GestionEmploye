@@ -1,0 +1,10 @@
+{% extends "employe/base.html" %}
+{% block content %}
+<form method="POST" class="space-y-4">
+    <span> Est vous sur de vouloir Suprime?<strong>{{employe.nom}}</strong>Votre<strong>{{employe.poste}}</strong></span>
+    {% csrf_token %}
+  
+    <button type="submit" class="btn btn-primary w-full">Valider</button>
+
+</form>
+{% endblock %}
